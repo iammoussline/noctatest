@@ -71,7 +71,7 @@ export function Hero({ content, onBook }: HeroProps) {
 
       // Parallax effect on image
       gsap.to(imageRef.current, {
-        y: '-15%',
+        y: '-10%',
         ease: 'none',
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -103,7 +103,7 @@ export function Hero({ content, onBook }: HeroProps) {
       id="hero"
     >
       {/* Background image with parallax */}
-      <div ref={imageRef} className="absolute inset-0 scale-[1.15]" data-cursor="expand">
+      <div ref={imageRef} className="absolute inset-0 scale-[1.3]" data-cursor="expand">
         <Image
           src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=85"
           alt="Paysage photographique Noctara"
@@ -127,7 +127,7 @@ export function Hero({ content, onBook }: HeroProps) {
         ref={badgeRef}
         className="absolute top-28 left-8 md:left-12 z-10"
       >
-        <span className="text-[0.6rem] font-display tracking-[0.25em] dark:text-dark-subtle text-light-subtle/80 uppercase">
+        <span className="inline-flex items-center text-[0.55rem] font-display tracking-[0.22em] text-white/75 uppercase bg-white/8 backdrop-blur-sm border border-white/15 px-3 py-1.5 rounded-full">
           {content.hero.badge}
         </span>
       </div>
@@ -168,7 +168,7 @@ export function Hero({ content, onBook }: HeroProps) {
               </svg>
             </a>
             <button
-              onClick={onBook}
+              onClick={() => document.querySelector('#tarifs')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-7 py-3.5 rounded-full bg-primary text-white text-sm font-heading font-semibold hover:bg-primary-light transition-all duration-300 hover:shadow-lg hover:shadow-primary/30"
               data-cursor="link"
             >

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Borel&family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=Unbounded:wght@400;700;900&display=swap');
-
+/* Fonts are loaded via next/font/google in layout.tsx */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

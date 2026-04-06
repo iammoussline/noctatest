@@ -8,36 +8,44 @@ export const metadata: Metadata = {
 
 const sections = [
   {
-    title: '1. Objet',
-    content: 'Les présentes conditions générales de vente s\'appliquent à toutes les prestations de services conclues par Noctara (photographe professionnel) auprès de ses clients.',
+    title: '1. Identification du vendeur',
+    content: 'KANDEMIR MOUHAMMED — NOCTARA., Entrepreneur individuel (Micro-entreprise), SIRET 820 139 699 00046, 17 B Rue Bartholdi Bât. 3 Appt 313, 63100 Clermont-Ferrand. Email : contact@thenoctara.com. TVA non applicable, art. 293 B du CGI (régime micro-entreprise).',
   },
   {
-    title: '2. Devis et commandes',
-    content: 'Toute prestation fait l\'objet d\'un devis préalable. Le devis est valable 30 jours. La commande est confirmée par le versement d\'un acompte de 30% du montant total.',
+    title: '2. Objet',
+    content: 'Les présentes conditions générales de vente s\'appliquent à toutes les prestations de services proposées par NOCTARA, notamment : prises de vue photographiques, retouches, montages vidéo, et vente de supports photos/vidéos aux particuliers et professionnels.',
   },
   {
-    title: '3. Tarifs',
-    content: 'Les tarifs sont indiqués en euros TTC. Noctara se réserve le droit de modifier ses tarifs à tout moment. Les prestations sont facturées aux tarifs en vigueur au moment de la confirmation.',
+    title: '3. Devis et commandes',
+    content: 'Toute prestation fait l\'objet d\'un devis préalable gratuit, valable 30 jours. La commande est confirmée par la signature du devis et le versement d\'un acompte de 30 % du montant total TTC.',
   },
   {
-    title: '4. Paiement',
-    content: 'Le solde est dû à la livraison des fichiers. Les paiements s\'effectuent par virement bancaire ou PayPal. En cas de retard de paiement, des pénalités de 3× le taux légal s\'appliquent.',
+    title: '4. Tarifs',
+    content: 'Les tarifs sont indiqués en euros TTC. En tant que micro-entrepreneur, NOCTARA n\'est pas assujetti à la TVA (art. 293 B du CGI). NOCTARA se réserve le droit de modifier ses tarifs à tout moment, sans que cela n\'affecte les commandes confirmées.',
   },
   {
-    title: '5. Droits d\'auteur',
-    content: 'Les photographies réalisées restent la propriété intellectuelle de Noctara. Le client bénéficie d\'une licence d\'utilisation personnelle et non commerciale, sauf accord écrit contraire.',
+    title: '5. Paiement',
+    content: 'Le solde est exigible à la livraison des fichiers. Les paiements sont acceptés par virement bancaire ou PayPal. Tout retard de paiement entraîne des pénalités au taux légal en vigueur, majorées d\'une indemnité forfaitaire de recouvrement de 40 €.',
   },
   {
-    title: '6. Livraison',
-    content: 'Les fichiers numériques sont livrés via une galerie privée en ligne, dans les délais convenus dans le devis. Noctara s\'engage à livrer des fichiers de haute qualité, retouchés selon les standards professionnels.',
+    title: '6. Droits d\'auteur et cession',
+    content: 'Les photographies réalisées demeurent la propriété intellectuelle de KANDEMIR MOUHAMMED — NOCTARA (Code de la propriété intellectuelle). Le client bénéficie d\'une licence d\'utilisation personnelle et non commerciale. Toute utilisation commerciale ou publicitaire est soumise à un accord écrit et une facturation spécifique.',
   },
   {
-    title: '7. Annulation',
-    content: 'En cas d\'annulation par le client moins de 48h avant la prestation, l\'acompte est conservé. Une annulation par Noctara entraîne le remboursement intégral des sommes versées.',
+    title: '7. Livraison des fichiers',
+    content: 'Les fichiers numériques haute résolution sont livrés via une galerie privée en ligne sécurisée, dans le délai convenu au devis. NOCTARA s\'engage à livrer des fichiers de haute qualité, retouchés selon ses standards professionnels.',
   },
   {
-    title: '8. Responsabilité',
-    content: 'Noctara ne peut être tenu responsable de la perte ou dommage des fichiers une fois livrés. Il est fortement recommandé d\'effectuer des sauvegardes.',
+    title: '8. Annulation et report',
+    content: 'Annulation par le client à moins de 48 h avant la prestation : l\'acompte est conservé à titre d\'indemnité. Report à plus de 72 h à l\'avance : sans pénalité sous réserve de disponibilité. Annulation par NOCTARA : remboursement intégral des sommes versées.',
+  },
+  {
+    title: '9. Responsabilité',
+    content: 'NOCTARA ne peut être tenu responsable de la perte ou de l\'endommagement des fichiers après leur livraison. Il est vivement recommandé au client d\'effectuer des copies de sauvegarde. La responsabilité de NOCTARA est limitée au montant de la prestation concernée.',
+  },
+  {
+    title: '10. Règlement des litiges',
+    content: 'En cas de différend, les parties s\'engagent à rechercher une solution amiable dans un délai de 30 jours. À défaut, le litige sera porté devant les juridictions compétentes du ressort de Clermont-Ferrand, conformément au droit français.',
   },
 ]
 
@@ -45,13 +53,8 @@ export default function CGV() {
   return (
     <div className="min-h-screen dark:bg-dark-bg bg-light-bg py-20 px-6">
       <div className="max-w-3xl mx-auto">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-sm font-body dark:text-dark-subtle text-light-subtle hover:text-accent transition-colors mb-10"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M19 12H5M12 5l-7 7 7 7"/>
-          </svg>
+        <Link href="/" className="inline-flex items-center gap-2 text-sm font-body dark:text-dark-subtle text-light-subtle hover:text-accent transition-colors mb-10">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
           Retour au site
         </Link>
 
@@ -60,18 +63,14 @@ export default function CGV() {
           Conditions Générales de Vente
         </h1>
         <p className="text-sm font-body dark:text-dark-subtle text-light-subtle mb-12">
-          Noctara · Dernière mise à jour : Janvier 2025
+          NOCTARA — Kandemir MOUHAMMED · Dernière mise à jour : Juillet 2025
         </p>
 
-        <div className="flex flex-col gap-8">
-          {sections.map((s, i) => (
-            <div key={i} className="p-6 rounded-xl dark:bg-dark-surface bg-light-surface border dark:border-dark-border border-light-border">
-              <h2 className="text-base font-display font-bold dark:text-dark-text text-light-text mb-3">
-                {s.title}
-              </h2>
-              <p className="text-sm font-body dark:text-dark-subtle text-light-subtle leading-relaxed">
-                {s.content}
-              </p>
+        <div className="flex flex-col gap-6">
+          {sections.map((s) => (
+            <div key={s.title} className="p-6 rounded-xl dark:bg-dark-surface bg-light-surface border dark:border-dark-border border-light-border">
+              <h2 className="text-base font-display font-bold dark:text-dark-text text-light-text mb-3">{s.title}</h2>
+              <p className="text-sm font-body dark:text-dark-subtle text-light-subtle leading-relaxed">{s.content}</p>
             </div>
           ))}
         </div>

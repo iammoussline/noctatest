@@ -1,8 +1,39 @@
 import type { Metadata, Viewport } from 'next'
+import { Borel, Outfit, Inter, Unbounded } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { LenisProvider } from '@/components/LenisProvider'
 import { CustomCursor } from '@/components/CustomCursor'
 import { PageTransition } from '@/components/PageTransition'
+
+// ─── next/font — auto-optimisé, servi depuis le même domaine ─────────────────
+const borel = Borel({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-borel',
+  display: 'swap',
+  preload: true,
+})
+const outfit = Outfit({
+  subsets: ['latin'],
+  variable: '--font-outfit',
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  display: 'swap',
+  preload: true,
+})
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  weight: ['300', '400', '500', '600'],
+  display: 'swap',
+})
+const unbounded = Unbounded({
+  subsets: ['latin'],
+  variable: '--font-unbounded',
+  weight: ['400', '700', '900'],
+  display: 'swap',
+  preload: true,
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://thenoctara.com'),
@@ -11,9 +42,9 @@ export const metadata: Metadata = {
     default: 'Noctara. — Photographe Professionnel | Clermont-Ferrand',
   },
   description: 'Photographe professionnel basé à Clermont-Ferrand. Portrait, mariage, corporate, événement. Chaque instant a une seule chance.',
-  keywords: ['photographe', 'Clermont-Ferrand', 'portrait', 'mariage', 'corporate', 'événement', 'professionnel'],
-  authors: [{ name: 'Noctara' }],
-  creator: 'Noctara',
+  keywords: ['photographe', 'Clermont-Ferrand', 'portrait', 'mariage', 'corporate', 'événement', 'professionnel', 'Kandemir', 'Noctara'],
+  authors: [{ name: 'Kandemir MOUHAMMED — Noctara.' }],
+  creator: 'Noctara.',
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
@@ -53,38 +84,29 @@ export const viewport: Viewport = {
   ],
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className="dark" suppressHydrationWarning>
+    <html
+      lang="fr"
+      className={`dark ${borel.variable} ${outfit.variable} ${inter.variable} ${unbounded.variable}`}
+      suppressHydrationWarning
+    >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Borel&family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=Unbounded:wght@400;700;900&display=swap"
-          rel="stylesheet"
-        />
+        {/* Theme init — prevent flash */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var stored = localStorage.getItem('noctara-theme');
-                  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  var dark = stored ? stored === 'dark' : prefersDark;
-                  document.documentElement.classList.toggle('dark', dark);
-                  document.documentElement.classList.toggle('light', !dark);
-                } catch(e) {}
-              })();
-            `,
+            __html: `(function(){try{var s=localStorage.getItem('noctara-theme'),d=window.matchMedia('(prefers-color-scheme: dark)').matches,dark=s?s==='dark':d;document.documentElement.classList.toggle('dark',dark);document.documentElement.classList.toggle('light',!dark);}catch(e){}})();`,
           }}
+        />
+        {/* Preload LCP hero image */}
+        <link
+          rel="preload"
+          as="image"
+          href="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=85"
+          fetchPriority="high"
         />
       </head>
       <body className="dark:bg-dark-bg bg-light-bg dark:text-dark-text text-light-text">
-        {/* Noise texture */}
         <div className="noise-overlay" aria-hidden="true" />
 
         <LenisProvider>
@@ -94,6 +116,7 @@ export default function RootLayout({
         </LenisProvider>
 
         <CustomCursor />
+        <Analytics />
       </body>
     </html>
   )

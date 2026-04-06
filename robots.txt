@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Allow: /en.html
+
+Disallow: /mentions-legales.html
+Disallow: /cgv.html
+Disallow: /confidentialite.html
+Disallow: /legal-notice.html
+Disallow: /cgv-en.html
+Disallow: /privacy.html
+
+Sitemap: https://thenoctara.com/sitemap.xml

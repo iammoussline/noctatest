@@ -138,7 +138,7 @@ export function About({ content }: AboutProps) {
             {/* Signature */}
             <div className="pt-4 border-t dark:border-dark-border border-light-border">
               <span className="font-logo text-3xl dark:text-white text-[#020F21]">{about.signature}</span>
-              <span className="font-logo text-3xl" style={{ color: '#2d73d4' }}>.</span>
+              <span className="font-logo text-3xl" style={{ color: '#FFBD59' }}>.</span>
             </div>
           </div>
         </div>

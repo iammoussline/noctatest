@@ -104,7 +104,7 @@ export function Navigation({ content }: NavigationProps) {
             data-cursor="link"
           >
             <span className={scrolled ? 'dark:text-white text-[#020F21]' : 'text-white'}>Noctara</span>
-            <span style={{ color: '#2d73d4' }}>.</span>
+            <span style={{ color: '#FFBD59' }}>.</span>
           </Link>
 
           {/* Desktop links */}

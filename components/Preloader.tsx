@@ -181,7 +181,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
             style={{
               fontFamily: 'var(--font-borel), cursive',
               fontSize: 'clamp(2.8rem, 8vw, 5.5rem)',
-              color: '#2d73d4',
+              color: '#FFBD59',
               fontWeight: 400,
             }}
           >

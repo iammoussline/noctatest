@@ -18,7 +18,7 @@ export function Footer({ content }: FooterProps) {
           <div className="flex flex-col gap-4">
             <div>
               <span className="font-logo text-2xl dark:text-dark-text text-light-text">
-                Noctara<span className="text-accent">.</span>
+                Noctara<span style={{ color: '#FFBD59' }}>.</span>
               </span>
             </div>
             <p className="text-sm font-body dark:text-dark-subtle text-light-subtle leading-relaxed max-w-xs">

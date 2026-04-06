@@ -2,18 +2,18 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Politique de Confidentialité — Noctara.',
+  title: 'Politique de Confidentialité — noctara.',
   robots: { index: false },
 }
 
 const sections = [
   {
     title: '1. Responsable du traitement',
-    content: 'KANDEMIR MOUHAMMED — NOCTARA., Entrepreneur individuel, SIRET 820 139 699 00046, 17 B Rue Bartholdi Bât. 3 Appt 313, 63100 Clermont-Ferrand. Email : contact@thenoctara.com.',
+    content: 'KANDEMIR MOUHAMMED — noctara., Entrepreneur individuel, SIRET 820 139 699 00046, 17 B Rue Bartholdi Bât. 3 Appt 313, 63100 Clermont-Ferrand. Email : contact@thenoctara.com.',
   },
   {
     title: '2. Données collectées',
-    content: 'NOCTARA collecte uniquement les données nécessaires aux prestations : nom, prénom, adresse email, numéro de téléphone (optionnel), et informations relatives aux projets photographiques. Aucune donnée sensible n\'est collectée.',
+    content: 'noctara. collecte uniquement les données nécessaires aux prestations : nom, prénom, adresse email, numéro de téléphone (optionnel), et informations relatives aux projets photographiques. Aucune donnée sensible n\'est collectée.',
   },
   {
     title: '3. Finalités du traitement',
@@ -21,7 +21,7 @@ const sections = [
   },
   {
     title: '4. Base légale',
-    content: 'Le traitement est fondé sur l\'exécution contractuelle (art. 6.1.b RGPD) et l\'intérêt légitime de NOCTARA à gérer sa relation client (art. 6.1.f RGPD).',
+    content: 'Le traitement est fondé sur l\'exécution contractuelle (art. 6.1.b RGPD) et l\'intérêt légitime de noctara. à gérer sa relation client (art. 6.1.f RGPD).',
   },
   {
     title: '5. Durée de conservation',
@@ -37,7 +37,7 @@ const sections = [
   },
   {
     title: '8. Sécurité',
-    content: 'NOCTARA met en œuvre les mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, perte, altération ou divulgation. Le site est hébergé sur Vercel Inc. (San Francisco, USA), qui dispose d\'une certification ISO 27001.',
+    content: 'noctara. met en œuvre les mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, perte, altération ou divulgation. Le site est hébergé sur Vercel Inc. (San Francisco, USA), qui dispose d\'une certification ISO 27001.',
   },
 ]
 
@@ -55,7 +55,7 @@ export default function Confidentialite() {
           Politique de Confidentialité
         </h1>
         <p className="text-sm font-body dark:text-dark-subtle text-light-subtle mb-12">
-          NOCTARA · Conforme RGPD · Dernière mise à jour : Juillet 2025
+          noctara. · Conforme RGPD · Dernière mise à jour : Juillet 2025
         </p>
 
         <div className="flex flex-col gap-6">

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Legal Notice — Noctara.',
+  title: 'Legal Notice — noctara.',
   robots: { index: false },
 }
 
@@ -25,7 +25,7 @@ export default function LegalNoticeEn() {
             {
               title: 'Site Publisher',
               items: [
-                'Trade name: NOCTARA.',
+                'Trade name: noctara.',
                 'Sole trader: KANDEMIR MOUHAMMED',
                 'Legal form: Sole trader (Micro-enterprise)',
                 'SIREN: 820 139 699',
@@ -56,13 +56,13 @@ export default function LegalNoticeEn() {
             {
               title: 'Intellectual Property',
               items: [
-                'All content on this site (texts, photographs, logos, visuals) is the exclusive property of KANDEMIR MOUHAMMED — NOCTARA. Any reproduction, distribution or use without prior written authorisation is strictly prohibited and constitutes infringement under French intellectual property law.',
+                'All content on this site (texts, photographs, logos, visuals) is the exclusive property of KANDEMIR MOUHAMMED — noctara. Any reproduction, distribution or use without prior written authorisation is strictly prohibited and constitutes infringement under French intellectual property law.',
               ],
             },
             {
               title: 'Limitation of Liability',
               items: [
-                'NOCTARA strives to ensure the accuracy of information on this site but cannot be held liable for any errors, omissions, or damages arising from its use.',
+                'noctara. strives to ensure the accuracy of information on this site but cannot be held liable for any errors, omissions, or damages arising from its use.',
               ],
             },
             {

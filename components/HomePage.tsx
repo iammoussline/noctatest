@@ -15,6 +15,7 @@ import { Contact } from './Contact'
 import { DevisDrawer } from './DevisDrawer'
 import { PersonalDrawer } from './PersonalDrawer'
 import { Footer } from './Footer'
+import { ScrollProgress } from './ScrollProgress'
 import type { SiteContent } from '@/lib/content/types'
 
 interface HomePageProps {
@@ -48,6 +49,7 @@ export function HomePage({ content }: HomePageProps) {
 
   return (
     <>
+      <ScrollProgress />
       <Navigation content={content} />
 
       <main>

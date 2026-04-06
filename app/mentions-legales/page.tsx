@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Mentions Légales — Noctara.',
+  title: 'Mentions Légales — noctara.',
   robots: { index: false },
 }
 
@@ -25,7 +25,7 @@ export default function MentionsLegales() {
             {
               title: 'Éditeur du site',
               items: [
-                'Nom commercial : NOCTARA.',
+                'Nom commercial : noctara.',
                 'Exploitant : KANDEMIR MOUHAMMED',
                 'Forme juridique : Entrepreneur individuel (Micro-entreprise)',
                 'SIREN : 820 139 699',
@@ -57,13 +57,13 @@ export default function MentionsLegales() {
             {
               title: 'Propriété intellectuelle',
               items: [
-                'L\'ensemble du contenu de ce site (textes, photographies, logos, visuels) est la propriété exclusive de KANDEMIR MOUHAMMED — NOCTARA. Toute reproduction, distribution ou utilisation sans autorisation écrite préalable est strictement interdite et constitue une contrefaçon au sens du Code de la propriété intellectuelle.',
+                'L\'ensemble du contenu de ce site (textes, photographies, logos, visuels) est la propriété exclusive de KANDEMIR MOUHAMMED — noctara. Toute reproduction, distribution ou utilisation sans autorisation écrite préalable est strictement interdite et constitue une contrefaçon au sens du Code de la propriété intellectuelle.',
               ],
             },
             {
               title: 'Limitation de responsabilité',
               items: [
-                'NOCTARA s\'efforce d\'assurer l\'exactitude des informations présentes sur ce site. Toutefois, l\'exploitant ne saurait être tenu responsable des erreurs ou omissions, ni des préjudices résultant de l\'utilisation des informations publiées.',
+                'noctara. s\'efforce d\'assurer l\'exactitude des informations présentes sur ce site. Toutefois, l\'exploitant ne saurait être tenu responsable des erreurs ou omissions, ni des préjudices résultant de l\'utilisation des informations publiées.',
               ],
             },
             {

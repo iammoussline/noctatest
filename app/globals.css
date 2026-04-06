@@ -215,23 +215,7 @@ html.lenis {
 }
 
 /* Pricing card hover */
-.pricing-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.pricing-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, transparent 40%, rgba(24, 88, 174, 0.06));
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.pricing-card:hover::after {
-  opacity: 1;
-}
+/* pricing-card ::after removed — was blocking pointer events */
 
 /* Process step connector */
 .process-connector {

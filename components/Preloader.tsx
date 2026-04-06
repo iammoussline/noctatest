@@ -82,7 +82,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
 
     // Phase 5 : glow à 100 % — pause visuelle avant sortie
     tl.to(logo, {
-      filter: 'drop-shadow(0 0 28px rgba(255, 189, 89, 0.55))',
+      filter: 'drop-shadow(0 0 28px rgba(45, 115, 212, 0.55))',
       duration: 0.4,
     }, 2.8)
 
@@ -181,7 +181,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
             style={{
               fontFamily: 'var(--font-borel), cursive',
               fontSize: 'clamp(2.8rem, 8vw, 5.5rem)',
-              color: '#FFBD59',
+              color: '#2d73d4',
               fontWeight: 400,
             }}
           >
@@ -195,7 +195,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
           style={{
             width: '100%',
             height: '1px',
-            background: 'linear-gradient(to right, transparent, rgba(255,189,89,0.6), transparent)',
+            background: 'linear-gradient(to right, transparent, rgba(45,115,212,0.6), transparent)',
           }}
         />
 
@@ -221,7 +221,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
             right: 0,
             fontFamily: 'var(--font-unbounded), sans-serif',
             fontSize: '0.7rem',
-            color: 'rgba(255,189,89,0.65)',
+            color: 'rgba(45,115,212,0.85)',
             letterSpacing: '0.08em',
           }}
         >
@@ -246,7 +246,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
           style={{
             height: '100%',
             width: `${count}%`,
-            background: 'linear-gradient(to right, #1858ae, #FFBD59)',
+            background: 'linear-gradient(to right, #1858ae, #2d73d4)',
             transition: 'width 0.12s linear',
           }}
         />

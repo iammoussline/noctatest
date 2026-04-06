@@ -140,7 +140,7 @@ export function Hero({ content, onBook }: HeroProps) {
           className="font-display font-black text-[min(1.75rem,5.5vw)] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.08] tracking-tighter text-white mb-8"
         >
           <span className="hero-line block whitespace-nowrap">{content.hero.line1}</span>
-          <span className="hero-line block whitespace-nowrap" style={{ color: '#FFBD59' }}>{content.hero.line2}</span>
+          <span className="hero-line block whitespace-nowrap" style={{ color: '#2d73d4' }}>{content.hero.line2}</span>
         </h1>
 
         {/* Bottom row */}

@@ -34,7 +34,7 @@ export function CustomCursor() {
         stateRef.current = 'expand'
         ring.style.width = '80px'
         ring.style.height = '80px'
-        ring.style.borderColor = 'rgba(255, 189, 89, 0.8)'
+        ring.style.borderColor = 'rgba(45, 115, 212, 0.8)'
         ring.style.mixBlendMode = 'normal'
       } else if (cursor === 'arrow') {
         stateRef.current = 'arrow'
@@ -104,7 +104,7 @@ export function CustomCursor() {
         style={{
           width: '6px',
           height: '6px',
-          backgroundColor: '#FFBD59',
+          backgroundColor: '#2d73d4',
           left: '-100px',
           top: '-100px',
           opacity: 0,

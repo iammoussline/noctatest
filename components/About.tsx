@@ -59,7 +59,7 @@ export function About({ content }: AboutProps) {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image */}
-          <div className="relative h-[500px] md:h-[650px] rounded-2xl overflow-hidden" data-cursor="expand">
+          <div className="relative h-[320px] sm:h-[420px] md:h-[550px] lg:h-[620px] rounded-2xl overflow-hidden" data-cursor="expand">
             <div ref={imageRef} className="absolute inset-0 scale-110">
               <Image
                 src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=900&q=80&auto=format"
@@ -116,8 +116,8 @@ export function About({ content }: AboutProps) {
 
             {/* Signature */}
             <div className="pt-4 border-t dark:border-dark-border border-light-border">
-              <span className="font-logo text-3xl text-accent">{about.signature}</span>
-              <span className="text-accent text-2xl">.</span>
+              <span className="font-logo text-3xl dark:text-white text-[#020F21]">{about.signature}</span>
+              <span className="font-logo text-3xl" style={{ color: '#FFBD59' }}>.</span>
             </div>
           </div>
         </div>

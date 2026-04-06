@@ -137,22 +137,22 @@ export function Hero({ content, onBook }: HeroProps) {
         {/* Title */}
         <h1
           ref={titleRef}
-          className="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] tracking-tighter text-white mb-8"
+          className="font-display font-black text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.08] tracking-tighter text-white mb-8"
         >
-          <span className="hero-line block">{content.hero.line1}</span>
-          <span className="hero-line block text-accent">{content.hero.line2}</span>
+          <span className="hero-line block sm:whitespace-nowrap">{content.hero.line1}</span>
+          <span className="hero-line block sm:whitespace-nowrap" style={{ color: '#FFBD59' }}>{content.hero.line2}</span>
         </h1>
 
         {/* Bottom row */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <p
             ref={descRef}
-            className="text-base md:text-lg font-body text-white/70 max-w-lg leading-relaxed"
+            className="text-sm md:text-base font-body text-white/70 max-w-md leading-relaxed"
           >
             {content.hero.description}
           </p>
 
-          <div ref={ctaRef} className="flex items-center gap-4">
+          <div ref={ctaRef} className="flex flex-wrap items-center gap-3">
             <a
               href="#portfolio"
               onClick={(e) => {

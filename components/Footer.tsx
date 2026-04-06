@@ -13,7 +13,7 @@ export function Footer({ content }: FooterProps) {
   return (
     <footer className="py-16 dark:bg-dark-surface bg-light-surface border-t dark:border-dark-border border-light-border">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mb-12">
           {/* Brand */}
           <div className="flex flex-col gap-4">
             <div>

@@ -13,6 +13,7 @@ import { Testimonials } from './Testimonials'
 import { Clients } from './Clients'
 import { Contact } from './Contact'
 import { DevisDrawer } from './DevisDrawer'
+import { PersonalDrawer } from './PersonalDrawer'
 import { Footer } from './Footer'
 import type { SiteContent } from '@/lib/content/types'
 
@@ -21,16 +22,28 @@ interface HomePageProps {
 }
 
 export function HomePage({ content }: HomePageProps) {
-  const [devisOpen, setDevisOpen] = useState(false)
-  const [prestation, setPrestation] = useState('')
+  // Pro devis drawer
+  const [proOpen, setProOpen] = useState(false)
+  const [proPrestation, setProPrestation] = useState('')
 
-  const openDevis = useCallback((p?: string) => {
-    setPrestation(p || '')
-    setDevisOpen(true)
+  // Personal booking drawer
+  const [personalOpen, setPersonalOpen] = useState(false)
+  const [personalPrestation, setPersonalPrestation] = useState('')
+
+  const openProDevis = useCallback((p?: string) => {
+    setProPrestation(p || '')
+    setProOpen(true)
   }, [])
 
-  const closeDevis = useCallback(() => {
-    setDevisOpen(false)
+  const openPersonalBooking = useCallback((p?: string) => {
+    setPersonalPrestation(p || '')
+    setPersonalOpen(true)
+  }, [])
+
+  // Generic open — used by nav CTA button (opens pro by default)
+  const openDevis = useCallback((p?: string) => {
+    setProPrestation(p || '')
+    setProOpen(true)
   }, [])
 
   return (
@@ -43,7 +56,11 @@ export function HomePage({ content }: HomePageProps) {
         <Stats content={content} />
         <Portfolio content={content} />
         <About content={content} />
-        <Pricing content={content} onBook={openDevis} />
+        <Pricing
+          content={content}
+          onPersonalBook={openPersonalBooking}
+          onProBook={openProDevis}
+        />
         <Process content={content} />
         <Testimonials content={content} />
         <Clients content={content} />
@@ -52,14 +69,23 @@ export function HomePage({ content }: HomePageProps) {
 
       <Footer content={content} />
 
+      {/* Pro drawer */}
       <DevisDrawer
         content={content}
-        isOpen={devisOpen}
-        prestation={prestation}
-        onClose={closeDevis}
+        isOpen={proOpen}
+        prestation={proPrestation}
+        onClose={() => setProOpen(false)}
       />
 
-      {/* Hidden trigger button for nav CTA */}
+      {/* Personal drawer */}
+      <PersonalDrawer
+        content={content}
+        isOpen={personalOpen}
+        prestation={personalPrestation}
+        onClose={() => setPersonalOpen(false)}
+      />
+
+      {/* Hidden trigger for nav CTA */}
       <button
         id="devis-trigger"
         onClick={() => openDevis()}

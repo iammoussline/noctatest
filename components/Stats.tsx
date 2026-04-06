@@ -90,7 +90,7 @@ export function Stats({ content }: StatsProps) {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-40 bg-accent/10 blur-3xl rounded-full" />
 
       <div className="relative max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10 divide-y lg:divide-y-0">
           {content.stats.map((stat, i) => (
             <div key={i} className="stat-item">
               <StatCounter

@@ -157,7 +157,7 @@ export function Contact({ content }: ContactProps) {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left — info */}
           <div className="flex flex-col gap-3">
             {INFO_ITEMS.map((item, i) => (
@@ -218,7 +218,7 @@ export function Contact({ content }: ContactProps) {
 
           {/* Right — form */}
           <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-            <div className="contact-form-field grid grid-cols-2 gap-3">
+            <div className="contact-form-field grid grid-cols-1 sm:grid-cols-2 gap-3">
               <input
                 type="text"
                 name="name"

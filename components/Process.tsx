@@ -111,7 +111,7 @@ export function Process({ content }: ProcessProps) {
         </div>
 
         {/* Steps */}
-        <div ref={stepsRef} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+        <div ref={stepsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 relative">
           {/* Connector line (desktop) */}
           <div className="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-px dark:bg-dark-border bg-light-border">
             <div className="process-bar-fill h-full bg-gradient-to-r from-primary to-accent" />
